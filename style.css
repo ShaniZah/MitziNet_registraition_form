@@ -1,64 +1,69 @@
-html,body{
-    font-family: Verdana, sans-serif;
-    background-color: antiquewhite;
-    text-align: center;
-    margin: 2%;
+html,
+body {
+  font-family: Verdana, sans-serif;
+  background-color: antiquewhite;
+  text-align: center;
+  margin: 3%;
 }
-.header{
-    position: relative;
-    width: 100%;
-    border: 10px solid #DAC0A3;
-
+.header {
+  position: relative;
+  width: 100%;
+  border: 10px solid #dac0a3;
 }
-h1{
-    color: #3C5B6F;
+h1 {
+  color: #3c5b6f;
 }
-p{
-    font-size: medium;
-    color: #3C5B6F;
-    margin-bottom: 8%;
+p {
+  font-size: medium;
+  color: #3c5b6f;
+  margin-bottom: 8%;
 }
-#submitionStatus{
-    margin: 0%;
-    font-size: small;
+#submitionStatus {
+  margin: 0%;
+  font-size: small;
 }
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+#successfulSubmit {
+  font-size: large;
+  color: green;
 }
-input{
-    width: 80%;
-    margin: 1%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 }
-input:hover{
-    border-color: orange;
+input {
+  width: 80%;
+  margin: 1%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
 }
-button{
-    font-family: Verdana, sans-serif;
-    color: #3C5B6F;
-    width: 130px;
-    margin-top: 20px;
-    padding: 4px;
-    border-radius: 4px;
-    border: 2px solid #ccc;
+input:hover {
+  border-color: orange;
+}
+button {
+  font-family: Verdana, sans-serif;
+  color: #3c5b6f;
+  width: 130px;
+  margin-top: 20px;
+  padding: 4px;
+  border-radius: 4px;
+  border: 2px solid #ccc;
 }
 button:hover {
-    background-color:#BED7DC;
+  background-color: #bed7dc;
 }
+
+/*responsive web page settings*/
 @media (max-width: 600px) {
-    .container{
-        grid-template-columns: 1fr;
-        margin: auto;
-        box-sizing: border-box;
-        grid-gap: 10px;
-    }
-    .containerForm {
-        width: 100%; 
-        padding: 5px;
-        
-    }
+  .container {
+    grid-template-columns: 1fr;
+    margin: auto;
+    box-sizing: border-box;
+    grid-gap: 10px;
   }
+  .containerForm {
+    width: 100%;
+    padding: 5px;
+  }
+}
