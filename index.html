@@ -1,3 +1,6 @@
+<!-- link to the web page -->
+<!-- https://shanizah.github.io/MitziNet_registraition_form/ -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mitzi Net</title>
   <link rel="stylesheet" href="./style.css" />
-  <img width="50" height="50" src="https://img.icons8.com/pastel-glyph/64/cat--v2.png" alt="cat--v2"/>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <img width="50" height="50" src="https://img.icons8.com/pastel-glyph/64/cat--v2.png" alt="cat--v2" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.jpg">
 </head>
 <script>
   let flag = true;
@@ -18,13 +21,13 @@
     let lastNameInput = document.getElementById("lastName");
     let emailInput = document.getElementById("email");
     let phoneNumberInput = document.getElementById("phoneNumber");
-    let inputs = [firstNameInput,lastNameInput,emailInput,phoneNumberInput];
+    let inputs = [firstNameInput, lastNameInput, emailInput, phoneNumberInput];
     checkPassword();
-    for(let i =0; i<inputs.length; i++){
-      if(inputs[i].value == ""){
+    for (let i = 0; i < inputs.length; i++) {
+      if (inputs[i].value == "") {
         flag = false;
         inputs[i].style.borderColor = "red";
-      }else{
+      } else {
         inputs[i].style.borderColor = "green";
       }
     }
@@ -64,12 +67,15 @@
   <h1>Mitzi Net Sign In</h1>
   <p>Welcome to Mitzi Net!</br> Home for all pet related information and products</p>
   <div class="container">
-    <div class="containerForm"> 
-      <input id="firstName" placeholder="First Name" type="text" />
+    <div class="cont">
+      <div class="containerForm">
+        <input id="firstName" placeholder="First Name" type="text" />
+      </div>
+      <div class="containerForm">
+        <input id="lastName" placeholder="Last Name" type="text" />
+      </div>
     </div>
-    <div class="containerForm">
-      <input id="lastName" placeholder="Last Name" type="text" />
-    </div>
+
     <div class="containerForm">
       <input id="email" placeholder="Email Address" type="text" />
     </div>

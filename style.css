@@ -15,12 +15,16 @@ h1 {
 p {
   font-size: medium;
   color: #3c5b6f;
-  margin-bottom: 8%;
+  margin-bottom: 3%;
 }
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 15px;
+}
+.nameContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 input {
   width: 80%;
@@ -55,11 +59,14 @@ button:hover {
 
 /*responsive web page settings*/
 @media (max-width: 600px) {
-  .container {
+  .container{
     grid-template-columns: 1fr;
     margin: auto;
     box-sizing: border-box;
     grid-gap: 10px;
+  }
+  .nameContainer{
+    grid-template-columns: 1fr;
   }
   .containerForm {
     width: 100%;
