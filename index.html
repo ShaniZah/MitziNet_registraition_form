@@ -1,6 +1,8 @@
 <!-- link to the web page -->
 <!-- https://shanizah.github.io/MitziNet_registraition_form/ -->
 
+<!--students: Shani Zahavi 211305271, Leon Petrov 314821521 -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +15,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.jpg">
 </head>
 <script>
-  let flag = true;
-
+  let successSubmitFlag = true;
   // check all input fields 
   function checkValid() {
     let firstNameInput = document.getElementById("firstName");
@@ -22,16 +23,17 @@
     let emailInput = document.getElementById("email");
     let phoneNumberInput = document.getElementById("phoneNumber");
     let inputs = [firstNameInput, lastNameInput, emailInput, phoneNumberInput];
+    // check validity of every input box
     checkPassword();
     for (let i = 0; i < inputs.length; i++) {
       if (inputs[i].value == "") {
-        flag = false;
+        successSubmitFlag = false;
         inputs[i].style.borderColor = "red";
       } else {
         inputs[i].style.borderColor = "green";
       }
     }
-    if (flag) {
+    if (successSubmitFlag) {
       document.getElementById("successfulSubmit").textContent = "You are signed-in!"
     }
   }
@@ -44,14 +46,14 @@
     if (password_1.value !== password_2.value) {
       password_status.textContent = "Passwords do not match!";
       password_1.style.borderColor = "red";
-      flag = false;
+      successSubmitFlag = false;
     }
     else if (password_1.value.length < 8) {
       password_status.textContent = "Password must be at least 8 digits!";
       password_status.style.color = "red";
       password_1.style.borderColor = "red";
       password_2.style.borderColor = "red";
-      flag = false;
+      successSubmitFlag = false;
     }
     else {
       password_status.textContent = "Valid password!";
@@ -63,11 +65,11 @@
 </script>
 
 <body>
-  <div class="header"></div>
+  <div class="pageTop"></div>
   <h1>Mitzi Net Sign In</h1>
   <p>Welcome to Mitzi Net!</br> Home for all pet related information and products</p>
   <div class="container">
-    <div class="cont">
+    <div class="nameContainer">
       <div class="containerForm">
         <input id="firstName" placeholder="First Name" type="text" />
       </div>
