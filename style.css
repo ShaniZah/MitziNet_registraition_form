@@ -20,9 +20,14 @@ p {
   margin-bottom: 3%;
 }
 .container {
+  background-color: rgb(224, 202, 175);
+  box-shadow: 0 0 10px rgb(224, 202, 175);
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 15px;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
 }
 .nameContainer {
   display: grid;
@@ -70,6 +75,7 @@ button:hover {
     margin: auto;
     box-sizing: border-box;
     grid-gap: 10px;
+    padding: 5px;
   }
   .nameContainer{
     grid-template-columns: 1fr; /*make columns stacked of top of each other*/
